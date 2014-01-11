@@ -13,7 +13,6 @@ class WC{
         System.out.print(line+" "+words+" "+chara);
     }
 }
-
 class WcOperation {
     public int countLines(String text){
         String lines[];
@@ -26,8 +25,6 @@ class WcOperation {
         return words.length;
     }
     public int countCharacters(String text){
-        String chars[];
-        chars = text.split("");
-        return chars.length;
+        return text.length();
     }
 }

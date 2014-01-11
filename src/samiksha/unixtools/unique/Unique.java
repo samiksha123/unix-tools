@@ -3,12 +3,12 @@ package samiksha.unixtools.unique;
 import samiksha.unixtools.readfile.ReadFile;
 
 public class Unique extends ReadFile {
-    public void  uniqLine(String content){
-        String array_content[],lines = "";
-        array_content=content.split("\n");
-        for (int count = 1; count < array_content.length; count++) {
-            if(!array_content[count-1].equals(array_content[count])){
-                lines += array_content[count]+ "\n";
+    public void  uniqueLine(String content){
+        String file_content[],lines = "";
+        file_content=content.split("\n");
+        for (int count = 1; count < file_content.length; count++) {
+            if(!file_content[count-1].equals(file_content[count])){
+                lines += file_content[count]+ "\n";
             }
         }
         System.out.println(lines);
@@ -18,7 +18,7 @@ public class Unique extends ReadFile {
         String filename = args[0];
         String input = read.readFile(filename);
         Unique u = new Unique();
-        u.uniqLine(input);
+        u.uniqueLine(input);
     }
 }
 
