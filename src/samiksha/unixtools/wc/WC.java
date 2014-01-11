@@ -1,4 +1,6 @@
-package samiksha.unixtools;
+package samiksha.unixtools.wc;
+
+import samiksha.unixtools.readfile.ReadFile;
 
 class WC{
     public static void main(String[] args){
