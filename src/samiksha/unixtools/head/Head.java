@@ -2,17 +2,18 @@ package samiksha.unixtools.head;
 
 import samiksha.unixtools.readfile.ReadFile;
 
+import java.io.IOException;
+
 public class Head extends ReadFile {
 
-    public void printLines(String str,int value){
-        String t[];
-        t = str.split("\n");
-        System.out.println(t);
-        for(int counter=1;counter < value;counter++) {
-            System.out.println(t[counter]);
+    public void printLines(String str,int noOfLines){
+        String lines[];
+        lines = str.split("\n");
+        for(int counter=1;counter < noOfLines;counter++) {
+            System.out.println(lines[counter]);
         }
     }
-    public static void main(String[] args) {
+    public static void main(String[] args)throws IOException {
         int noOfLines;
         String filename = args[0],value = "10";
         Head head = new Head();

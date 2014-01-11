@@ -2,18 +2,19 @@ package samiksha.unixtools.tail;
 
 import samiksha.unixtools.readfile.ReadFile;
 
+import java.io.IOException;
+
 public class Tail extends ReadFile {
 
     public void printLines(String str,int value){
-        String t[];
-        t = str.split("\n");
-        System.out.println(t);
-        int noOfLines = t.length - value;
-        for(int counter=noOfLines;counter < t.length;counter++) {
-          System.out.println(t[counter]);
+        String lines[];
+        lines = str.split("\n");
+        int noOfLines = lines.length - value;
+        for(int counter=noOfLines;counter < lines.length;counter++) {
+          System.out.println(lines[counter]);
         }
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         int noOfLines;
         String filename = args[0],value = "10";
         Tail tail = new Tail();

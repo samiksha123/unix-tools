@@ -13,7 +13,7 @@ public class ReduceSpace {
         return input;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         ReadFile read = new ReadFile();
         String content;
         String filename = args[0];
