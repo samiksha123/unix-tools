@@ -6,16 +6,19 @@ import java.io.IOException;
 
 public class Tail extends ReadFile {
 
-    public void printLines(String str,int value){
+    public String printLines(String str,int value){
         String lines[];
         lines = str.split("\n");
+        String result="";
         int noOfLines = lines.length - value;
         for(int counter=noOfLines;counter < lines.length;counter++) {
-          System.out.println(lines[counter]);
+            result += lines[counter]+"\n";
         }
+        return result;
     }
     public static void main(String[] args) throws IOException {
         int noOfLines;
+        String res;
         String filename = args[0],value = "10";
         Tail tail = new Tail();
         ReadFile read = new ReadFile();
@@ -25,7 +28,8 @@ public class Tail extends ReadFile {
         }
         noOfLines = Integer.parseInt(value);
         String input = read.readFile(filename);
-        tail.printLines(input, noOfLines);
+        res = tail.printLines(input, noOfLines);
+        System.out.println(res);
         }
     }
 
