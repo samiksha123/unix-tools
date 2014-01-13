@@ -6,16 +6,19 @@ import java.io.IOException;
 
 public class Head extends ReadFile {
 
-    public void printLines(String str,int noOfLines){
-        String lines[];
-        lines = str.split("\n");
-        for(int counter=1;counter < noOfLines;counter++) {
-            System.out.println(lines[counter]);
+    public String printLines(String str,int noOfLines){
+        String result = "";
+        String[] lines = str.split("\n");
+        for(int counter=0;counter < noOfLines;counter++) {
+            result += lines[counter]+"\n";
         }
+        return result;
     }
+
     public static void main(String[] args)throws IOException {
         int noOfLines;
         String filename = args[0],value = "10";
+        String result;
         Head head = new Head();
         ReadFile read = new ReadFile();
         if(args[0].startsWith("-")) {
@@ -24,6 +27,8 @@ public class Head extends ReadFile {
         }
         noOfLines = Integer.parseInt(value);
         String input = read.readFile(filename);
-        head.printLines(input, noOfLines);
+        result = head.printLines(input,noOfLines);
+        System.out.println(result);
+
     }
 }

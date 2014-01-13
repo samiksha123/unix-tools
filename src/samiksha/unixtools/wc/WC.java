@@ -4,7 +4,7 @@ import samiksha.unixtools.readfile.ReadFile;
 
 import java.io.IOException;
 
-class WC{
+public class WC{
     public static void main(String[] args) throws IOException {
         ReadFile read = new ReadFile();
         String input = read.readFile(args[0]);
