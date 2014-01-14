@@ -1,11 +1,11 @@
 one
 two
-this is good
-this is good
-how are
-how are you
+this,is,good
+this,is,good
+how,are
+how,are,you
 fine
 fine
-I am fine
-thank you
-thank you
+I,am,fine
+thank,you
+thank,you
