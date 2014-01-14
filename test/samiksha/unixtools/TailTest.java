@@ -3,7 +3,7 @@ package samiksha.unixtools;
 import org.junit.Test;
 import static junit.framework.Assert.assertEquals;
 
-public class TailTest extends Tail {
+public class TailTest {
     @Test
     public void testPrintLines() throws Exception {
         String input = "samiksha\nkavita\nmanali\nshital\ntanbir\nsayali\npallavi\nprajakta";

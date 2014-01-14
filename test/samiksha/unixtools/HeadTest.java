@@ -1,13 +1,9 @@
 package samiksha.unixtools;
 
 import org.junit.Test;
-import samiksha.unixtools.head.Head;
 
 import static junit.framework.Assert.assertEquals;
 
-/**
- * Created by samiksha on 1/13/14.
- */
 public class HeadTest {
     @Test
     public void testPrintLines() throws Exception {

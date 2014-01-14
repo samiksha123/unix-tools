@@ -1,4 +1,4 @@
-package samiksha.unixtools.wc;
+package samiksha.unixtools;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 public class WcOperationTest extends WC {
     @Test
     public void testCountLines() throws Exception {
-        WcOperation w = new WcOperation();
+        WC w = new WC();
         String str = "hello world";
         int expected = 1;
 
@@ -18,7 +18,7 @@ public class WcOperationTest extends WC {
 
     @Test
     public void testCountWords() throws Exception {
-        WcOperation w = new WcOperation();
+        WC w = new WC();
         String str = "hello world";
         int expected = 2;
 
@@ -29,7 +29,7 @@ public class WcOperationTest extends WC {
 
     @Test
     public void testCountCharacters() throws Exception {
-        WcOperation w = new WcOperation();
+        WC w = new WC();
         String str = "hello world";
         int expected = 11;
 
