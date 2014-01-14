@@ -1,7 +1,6 @@
 package samiksha.unixtools;
 
 import org.junit.Test;
-import samiksha.unixtools.tail.Tail;
 import static junit.framework.Assert.assertEquals;
 
 public class TailTest extends Tail {

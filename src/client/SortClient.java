@@ -1,24 +1,8 @@
-package samiksha.unixtools.sort;
-
+package client;
 import samiksha.unixtools.readfile.ReadFile;
+import samiksha.unixtools.Sort;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-public class Sort {
-    private String[] defaultSort(String input) {
-        String content[] = input.split("\n");
-        Arrays.sort(content);
-        return content;
-    }
-    public String[] reverseSort(String input){
-        String lines[] = defaultSort(input);
-        List<String> list = Arrays.asList(lines);
-        Collections.reverse(list);
-        lines = list.toArray(new String[list.size()]);
-        return lines;
-    }
+public class SortClient {
     public static void main(String[] args) {
         ReadFile read = new ReadFile();
         String filename = args[0];

@@ -1,20 +1,11 @@
-package samiksha.unixtools.head;
+package client;
 
+import samiksha.unixtools.Head;
 import samiksha.unixtools.readfile.ReadFile;
 
 import java.io.IOException;
 
-public class Head extends ReadFile {
-
-    public String printLines(String str,int noOfLines){
-        String result = "";
-        String[] lines = str.split("\n");
-        for(int counter=0;counter < noOfLines;counter++) {
-            result += lines[counter]+"\n";
-        }
-        return result;
-    }
-
+public class HeadClient {
     public static void main(String[] args)throws IOException {
         int noOfLines;
         String filename = args[0],value = "10";
@@ -29,6 +20,5 @@ public class Head extends ReadFile {
         String input = read.readFile(filename);
         result = head.printLines(input,noOfLines);
         System.out.println(result);
-
     }
 }

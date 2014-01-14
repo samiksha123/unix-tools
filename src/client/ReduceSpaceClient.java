@@ -1,19 +1,15 @@
-package samiksha.unixtools.reducespace;
+package client;
 
 import samiksha.unixtools.readfile.ReadFile;
+import samiksha.unixtools.ReduceSpace;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class ReduceSpace {
-    String reduce(String input) {
-        input = input.replaceAll("\\s+", " ");
-        return input;
-    }
-
-    public static void main(String[] args) throws IOException{
+public class ReduceSpaceClient {
+    public static void main(String[] args) throws IOException {
         ReadFile read = new ReadFile();
         String content;
         String filename = args[0];
@@ -29,8 +25,6 @@ public class ReduceSpace {
         } catch (IOException e) {
             e.printStackTrace();
         }
-     }
+    }
+
 }
-
-
-

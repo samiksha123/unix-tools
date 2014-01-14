@@ -1,21 +1,11 @@
-package samiksha.unixtools.tail;
+package client;
 
 import samiksha.unixtools.readfile.ReadFile;
+import samiksha.unixtools.Tail;
 
 import java.io.IOException;
 
-public class Tail extends ReadFile {
-
-    public String printLines(String str,int value){
-        String lines[];
-        lines = str.split("\n");
-        String result="";
-        int noOfLines = lines.length - value;
-        for(int counter=noOfLines;counter < lines.length;counter++) {
-            result += lines[counter]+"\n";
-        }
-        return result;
-    }
+public class TailClient {
     public static void main(String[] args) throws IOException {
         int noOfLines;
         String res;
@@ -30,6 +20,5 @@ public class Tail extends ReadFile {
         String input = read.readFile(filename);
         res = tail.printLines(input, noOfLines);
         System.out.println(res);
-        }
     }
-
+}
