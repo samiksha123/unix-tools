@@ -78,3 +78,6 @@ It will print file data in sorted reverse order.
     
 It will remove extra spaces from file and rewrite that file.    
 
+*src->client->main files*
+*src->samiksha.unixtools->library files*
+*test->samiksha.unixtools->test files*
