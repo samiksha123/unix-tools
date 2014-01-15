@@ -17,5 +17,4 @@ public class Sort {
         lines = list.toArray(new String[list.size()]);
         return lines;
     }
-
 }

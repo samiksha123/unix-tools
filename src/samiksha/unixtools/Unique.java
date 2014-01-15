@@ -9,13 +9,9 @@ public class Unique {
                 lines += file_content[count]+ "\n";
             }
         }
-        return lines;
+        return lines + file_content[file_content.length-1];
     }
 }
-
-
-
-
 
 
 

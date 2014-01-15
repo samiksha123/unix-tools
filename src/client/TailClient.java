@@ -12,9 +12,9 @@ public class TailClient {
         String filename = args[0],value = "10";
         Tail tail = new Tail();
         ReadFile read = new ReadFile();
-        if(args[0].startsWith("-")) {
-            value = args[0].substring(1);
-            filename = args[1];
+        for (int i = 0; i < args.length; i++) {
+            if (args[i].startsWith("-")) value = args[i].substring(1);
+            else filename = args[i];
         }
         noOfLines = Integer.parseInt(value);
         String input = read.readFile(filename);

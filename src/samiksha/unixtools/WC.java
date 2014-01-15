@@ -8,7 +8,7 @@ public class WC {
     }
     public int countWords(String text){
         String words[];
-        words = text.split(" ");
+        words = text.split("\\s+");
         return words.length;
     }
     public int countCharacters(String text){
