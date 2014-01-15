@@ -16,9 +16,9 @@ public class ReduceSpaceClient {
         String input = read.readFile(filename);
         ReduceSpace rs = new ReduceSpace();
         content = rs.reduce(input);
-        try{
+        try {
             File file = new File(filename);
-            FileWriter fw = new FileWriter("two.txt");
+            FileWriter fw = new FileWriter(args[0]);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(content);
             bw.close();
@@ -26,5 +26,4 @@ public class ReduceSpaceClient {
             e.printStackTrace();
         }
     }
-
 }

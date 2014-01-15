@@ -1,1 +1,0 @@
-java -cp D:/projects/unix-tools/out/artifacts/unix_tools_jar/unix-tools.jar client.HeadClient $1 $2

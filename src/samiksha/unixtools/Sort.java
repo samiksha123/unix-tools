@@ -10,7 +10,8 @@ public class Sort {
         Arrays.sort(content);
         return content;
     }
-    public String[] reverseSort(String input){
+
+    public String[] reverseSort(String input) {
         String lines[] = defaultSort(input);
         List<String> list = Arrays.asList(lines);
         Collections.reverse(list);

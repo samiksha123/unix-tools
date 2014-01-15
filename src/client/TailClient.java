@@ -9,7 +9,7 @@ public class TailClient {
     public static void main(String[] args) throws IOException {
         int noOfLines;
         String res;
-        String filename = args[0],value = "10";
+        String filename = args[0], value = "10";
         Tail tail = new Tail();
         ReadFile read = new ReadFile();
         for (int i = 0; i < args.length; i++) {

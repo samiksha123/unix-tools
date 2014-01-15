@@ -3,7 +3,7 @@ package client;
 import samiksha.unixtools.readfile.ReadFile;
 import samiksha.unixtools.Unique;
 
-public class UniqueClient{
+public class UniqueClient {
     public static void main(String[] args) {
         ReadFile read = new ReadFile();
         String filename = args[0];
