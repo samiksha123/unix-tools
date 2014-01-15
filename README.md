@@ -15,7 +15,7 @@ WC
 
 ## Head
 
-**sa_wc.sh filename**
+**sa_head.sh filename**
 
     `example = sa_head.sh one.txt`
     
@@ -32,7 +32,7 @@ It will print top 5 lines of file
 
 **sa_tail.sh filename**
 
-    `example = sa_wc one.txt`
+    `example = sa_tail.sh one.txt`
 It will print last 10 lines of file   
 **sa_tail.sh -number-of-lines filename**
 
