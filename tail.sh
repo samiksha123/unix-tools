@@ -1,1 +1,0 @@
-java -cp out/artifacts/unix_tools_jar/unix-tools.jar client.TailClient $1 $2
