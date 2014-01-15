@@ -1,5 +1,3 @@
-unix-tools
-==========
 
 Steps to run unixtools commands
 ===============
@@ -43,7 +41,7 @@ It will print last 10 lines of file
 It will print last 5 lines of file  
 
 
-## Uniq
+## Unique
 **sa_unique filename**
 
     `example = sa_unique one.txt`
