@@ -79,5 +79,16 @@ It will print file data in sorted reverse order.
 It will remove extra spaces from file and rewrite that file.    
 
 *src->client->main files*
+
 *src->samiksha.unixtools->library files*
+
 *test->samiksha.unixtools->test files*
+
+
+*your classpath name must be "UNIX_TOOLS"*
+
+*classpath contains path of shFiles folder*
+
+*where ever you put shFiles folder, classpath must contain path of that folder*
+
+*example = "D:\projects\unix-tools\shFiles"*
