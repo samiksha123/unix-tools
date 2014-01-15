@@ -1,7 +1,7 @@
 package samiksha.unixtools;
 
 public class Cut {
-    public String cutCount(int field_no, String input, String delimiter) {
+    public String cut(int field_no, String input, String delimiter) {
         String words[];
         String result = "";
         String lines[] = input.split("\n");
@@ -12,5 +12,4 @@ public class Cut {
         }
         return result;
     }
-
 }

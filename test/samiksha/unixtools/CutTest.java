@@ -9,16 +9,16 @@ public class CutTest{
     public void testCutCount() throws Exception {
         String input = "samiksha ande\nkavita jadhav\nmanali thorat\nshital mane";
         String expected = "ande\njadhav\nthorat\nmane\n";
-        Cut cut = new Cut();
-        String actual = cut.cutCount(2,input," ");
+        Cut c = new Cut();
+        String actual = c.cut(2,input," ");
         assertEquals(expected, actual);
     }
     @Test
     public void test_for_CutCount() throws Exception {
         String input = "samiksha ande\nkavita jadhav\nmanali thorat\nshital mane";
         String expected = "samiksha\nkavita\nmanali\nshital\n";
-        Cut cut = new Cut();
-        String actual = cut.cutCount(1,input," ");
+        Cut c = new Cut();
+        String actual = c.cut(1,input," ");
         assertEquals(expected, actual);
     }
 }
