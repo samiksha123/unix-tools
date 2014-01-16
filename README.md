@@ -72,11 +72,11 @@ It will print file data in sorted reverse order.
 
 ## ReduceSpace
 
-**sa_reduceSpace.sh filename**
+**sa_reduceSpace.sh src_file dest_file**
 
-    `sa_reduceSpace.sh one.txt`
+    `sa_reduceSpace.sh one.txt two.txt`
     
-It will remove extra spaces from file and rewrite that file.    
+It will remove extra spaces from source file and write content in destination file .    
 
 *src->client->main files*
 
