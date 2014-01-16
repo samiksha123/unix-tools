@@ -10,16 +10,11 @@ public class Tail extends ReadFile {
         String lines[];
         lines = str.split("\n");
         String result = "";
-        int noOfLines;
-        if (lines.length < value || lines.length > value)
-            noOfLines = lines.length;
-        else
+        int noOfLines = 0;
+        if (lines.length > value)
             noOfLines = lines.length - value;
-        for (int counter = noOfLines; counter < lines.length; counter++) {
-            result += lines[counter] + "\n";
-        }
+        for (; noOfLines < lines.length ; noOfLines++)
+            result += lines[noOfLines]+"\n";
         return result;
     }
-
 }
-

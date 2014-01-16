@@ -10,7 +10,9 @@ public class ReduceSpaceTest extends ReduceSpace {
         String input = "samiksha   ande\nkavita   jadhav\nmanali  thorat  \nshital    mane";
         String expected = "samiksha ande kavita jadhav manali thorat shital mane";
         ReduceSpace rs = new ReduceSpace();
+
         String actual = rs.reduce(input);
+
         assertEquals(expected, actual);
     }
 }

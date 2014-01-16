@@ -15,7 +15,6 @@ public class SortTest extends Sort {
             assertEquals(expected[i], actual[i]);
         }
     }
-
     @Test
     public void testReverseSort() throws Exception {
         String input = "samiksha\nkavita\nmanali\nshital\ntanbir\nsayali";

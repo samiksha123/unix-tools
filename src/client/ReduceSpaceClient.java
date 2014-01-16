@@ -11,19 +11,17 @@ import java.io.IOException;
 public class ReduceSpaceClient {
     public static void main(String[] args) throws IOException {
         ReadFile read = new ReadFile();
-        String content;
-        String filename = args[0];
-        String input = read.readFile(filename);
+        String input = read.readFile(args[0]);
         ReduceSpace rs = new ReduceSpace();
-        content = rs.reduce(input);
+        String content = rs.reduce(input);
         try {
-            File file = new File(filename);
-            FileWriter fw = new FileWriter(args[0]);
+            FileWriter fw = new FileWriter(args[1]);
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(content);
             bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("extra spaces removed");
     }
 }
