@@ -1,4 +1,4 @@
 language: java
-ant zipfile
+script : 'ant zipfile'
 
 
