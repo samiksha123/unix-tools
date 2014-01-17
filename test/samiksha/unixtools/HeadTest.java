@@ -36,3 +36,4 @@ public class HeadTest {
         assertEquals(expected, actual);
     }
 }
+
