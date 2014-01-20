@@ -1,24 +1,46 @@
 <project name="unix-tools">
-    <target name="createDir">
-        <mkdir dir = "unix_tools"></mkdir>
-        <mkdir dir = "unix_tools/lib"></mkdir>
-        <mkdir dir = "unix_tools/bin"></mkdir>
+    <target name = "clean">
+        <delete dir = "unix_tools/build"></delete>
+    </target>
+    <target name="compile" depends = "clean">
+        <mkdir dir="unix_tools/build/classes"></mkdir>
+        <javac srcdir="src" destdir="unix_tools/build/classes"></javac>
+    </target>
+    <target name="test-compile" depends="compile">
+        <mkdir dir="unix_tools/build/test-classes"></mkdir>
+        <javac srcdir="test" destdir="unix_tools/build/test-classes" classpath="unix_tools/build/classes"></javac>
+    </target>
+    <target name="run-test" depends="test-compile">
+        <java classname="org.junit.runner.JUnitCore"
+              classpath="unix_tools/external-lib/junit-4.10.jar;unix_tools/build/classes;unix_tools/build/test-classes">
+            <arg value="samiksha.unixtools.CutTest"/>
+            <arg value="samiksha.unixtools.HeadTest"/>
+            <arg value="samiksha.unixtools.TailTest"/>
+            <arg value="samiksha.unixtools.UniqueTest"/>
+            <arg value="samiksha.unixtools.ReduceSpaceTest"/>
+            <arg value="samiksha.unixtools.SortTest"/>
+            <arg value="samiksha.unixtools.WcOperationTest"/>
+        </java>
+    </target>
+    <target name="createDir" depends="test-compile">
+        <mkdir dir="unix_tools/lib"></mkdir>
+        <mkdir dir="unix_tools/bin"></mkdir>
         <copy file="README.md" todir="unix_tools"/>
     </target>
-    <target name = "moveSH" depends = "createDir">
-        <copy file="shFiles/sa_wc.sh" todir="unix_tools/bin"/>
-        <copy file="shFiles/sa_head.sh" todir="unix_tools/bin"/>
-        <copy file="shFiles/sa_tail.sh" todir="unix_tools/bin"/>
-        <copy file="shFiles/sa_reduceSpace.sh" todir="unix_tools/bin"/>
-        <copy file="shFiles/sa_cut.sh" todir="unix_tools/bin"/>
-        <copy file="shFiles/sa_unique.sh" todir="unix_tools/bin"/>
-        <copy file="shFiles/sa_sort.sh" todir="unix_tools/bin"/>
+    <target name="createJar" depends="createDir">
+        <jar destfile="unix_tools/lib/unix-tools.jar" basedir="unix_tools/build/classes"></jar>
+        <delete dir = "unix_tools/build/classes"></delete>
+        <delete dir = "unix_tools/build/test-classes"></delete>
     </target>
-    <target name ="movejar" depends = "moveSH">
-        <copy file="out/artifacts/unix_tools_jar/unix-tools.jar" todir="unix_tools/lib"/>
+    <target name="moveSH" depends="createJar">
+        <copy todir="unix_tools/bin">
+            <fileset dir="shFiles"/>
+        </copy>
     </target>
-
-    <target name = "zipfile" depends = "movejar">
+    <target name="copyReadme" depends="moveSH">
+        <copy file="README.md" todir="unix-tools"></copy>
+    </target>
+    <target name="zipfile" depends="copyReadme">
         <zip destfile="unix_tools.zip" basedir="unix_tools"/>
     </target>
 </project>

@@ -1,1 +1,1 @@
-java -cp $UNIX_TOOLS/unix-tools.jar client.HeadClient $1 $2
+java -cp $UNIX_TOOLS/lib/unix-tools.jar client.HeadClient $1 $2

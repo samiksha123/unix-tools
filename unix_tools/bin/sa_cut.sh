@@ -1,1 +1,1 @@
-java -cp $UNIX_TOOLS/unix-tools.jar client.CutClient $1 $2 $3
+java -cp $UNIX_TOOLS/lib/unix-tools.jar client.CutClient $1 $2 $3
